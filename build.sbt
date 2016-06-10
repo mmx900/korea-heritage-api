@@ -25,7 +25,10 @@ lazy val kha = crossProject.in(file(".")).
   ).
   jsSettings(
     libraryDependencies ++= Seq(
-      "be.doeraene" %%% "scalajs-jquery" % "0.9.0"
+      "org.querki" %%% "jquery-facade" % "1.0-RC6"
+    ),
+    jsDependencies ++= Seq(
+      "org.webjars" % "jquery" % "2.1.3" / "2.1.3/jquery.js"
     )
   )
 
