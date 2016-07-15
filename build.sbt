@@ -15,7 +15,7 @@ lazy val kha = crossProject.in(file(".")).
     version := "0.1-SNAPSHOT",
     libraryDependencies ++= Seq(
       "fr.hmil" %%% "roshttp" % "1.0.0",
-      "org.scalatest" %%% "scalatest" % "3.0.0-RC1" % "test"
+      "org.scalatest" %%% "scalatest" % "3.0.0-RC4" % "test"
     )
   ).
   jvmSettings(
@@ -28,7 +28,7 @@ lazy val kha = crossProject.in(file(".")).
       "org.querki" %%% "jquery-facade" % "1.0-RC6"
     ),
     jsDependencies ++= Seq(
-      "org.webjars" % "jquery" % "2.1.3" / "2.1.3/jquery.js"
+      "org.webjars" % "jquery" % "2.2.4" / "2.2.4/jquery.js"
     )
   )
 
