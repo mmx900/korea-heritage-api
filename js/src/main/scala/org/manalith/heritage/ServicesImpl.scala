@@ -2,7 +2,6 @@ package org.manalith.heritage
 
 import fr.hmil.roshttp.HttpResponse
 import org.manalith.heritage.Services._
-
 import org.querki.jquery._
 
 class ServicesImpl extends Services {

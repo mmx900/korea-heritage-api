@@ -28,8 +28,10 @@ lazy val kha = crossProject.in(file(".")).
       "org.querki" %%% "jquery-facade" % "1.0-RC6"
     ),
     jsDependencies ++= Seq(
-      "org.webjars" % "jquery" % "2.2.4" / "2.2.4/jquery.js"
-    )
+      "org.webjars" % "jquery" % "2.2.4" / "2.2.4/jquery.js",
+      RuntimeDOM % "test"
+    ),
+    jsEnv in Test := PhantomJSEnv(args = Seq("--web-security=no")).value
   )
 
 lazy val khaJVM = kha.jvm

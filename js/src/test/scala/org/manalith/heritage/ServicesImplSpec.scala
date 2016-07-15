@@ -2,7 +2,11 @@ package org.manalith.heritage
 
 import org.scalatest.AsyncFreeSpec
 
+import scala.concurrent.ExecutionContext
+
 class ServicesImplSpec extends AsyncFreeSpec {
+
+  override implicit val executionContext = ExecutionContext.Implicits.global
 
   val servicesImpl = new ServicesImpl
 
@@ -11,7 +15,7 @@ class ServicesImplSpec extends AsyncFreeSpec {
 
     "should return valid values" in {
       listItems map { list =>
-        assert(list.totalCount == 14579)
+        assert(list.totalCount > 14579) // 테스트 작성 시점의 totalCount
         assert(list.pageSize == 10)
         assert(list.page == 1)
         assert(list.items.size == 10)
